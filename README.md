@@ -43,12 +43,14 @@ Make sure the model path is correct before running
  ``` shell
  python3 export_tensorrt.py
  ```
+Please see more information in [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
 
 ### 2. Real-time camera inference
 
 ``` shell
 python3 run_camera.py --model 'model/yolov8n.engine'
 ```
+Please see more information in [`ultralytics_predict`](https://docs.ultralytics.com/modes/predict/)
 
 #### Description of all arguments
 
