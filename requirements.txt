@@ -1,0 +1,3 @@
+pathlib
+numpy
+opencv-python
