@@ -1,3 +1,2 @@
-pathlib
 numpy
 opencv-python
