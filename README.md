@@ -1,13 +1,63 @@
 # YOLOv8-TensorRT
 👀 YOLOv8 using TensorRT in real-time camera
 
-# FPS
+# Performance
+
 #### Tested on `Nvidia Jetson Orin Nano`
-|Model|Quantization method|FPS|
-|:---|:---:|:---:|
-|yolov8n.pt||35
-|yolov8n.engine|FP16|60
-|yolov8n.engine|Int8|80
+
+<details>
+<summary>yolov8n</summary>
+<!-- - #### yolov8n -->
+
+|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
+|:---:|:---:|:---:|:---:|:---:|
+|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||40|20|37.1
+|yolov8n.engine|FP16|70|7|37.1
+|yolov8n.engine|Int8|80|5|19.8
+
+</details>
+
+<details>
+<summary>yolov8s</summary>
+<!-- - #### yolov8s -->
+
+|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
+|:---:|:---:|:---:|:---:|:---:|
+|[yolov8s.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt)||30|30|44.7
+|yolov8s.engine|FP16|55|11|44.7
+|yolov8s.engine|Int8|70|8|28.3
+
+</details>
+
+<details open>
+<summary>yolov8m</summary>
+<!-- - #### yolov8m -->
+
+|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
+|:---:|:---:|:---:|:---:|:---:|
+|[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||15|53|50
+|yolov8m.engine|FP16|30|23|50
+|yolov8m.engine|Int8|45|16|31.7
+
+</details>
+
+<details open>
+<summary>yolov8l</summary>
+<!-- - #### yolov8l -->
+
+|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
+|:---:|:---:|:---:|:---:|:---:|
+|[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||10||
+|yolov8l.engine|FP16|||
+|yolov8l.engine|Int8|||
+
+</details>
+
+
+***NOTICE:***
+
+- **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset. <br>Reproduce by `yolo val detect data=coco.yaml device=0`
+
 
 # Prepare
 1. Install `CUDA`
@@ -41,7 +91,7 @@
 
 ***NOTICE:***
 
-Install compatible `PyTorch` in the `CUDA` version
+- Install compatible `PyTorch` in the `CUDA` version
 
 🚀 [`PyTorch Version Check`](https://pytorch.org/get-started/previous-versions/)
 
