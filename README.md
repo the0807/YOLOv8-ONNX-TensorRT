@@ -16,22 +16,31 @@
     🚀 [`TensorRT official website`](https://developer.nvidia.com/nvidia-tensorrt-8x-download)
 
 4. Install python requirements
- ``` shell
- pip install -r requirements.txt
- ```
+     ``` shell
+     pip install -r requirements.txt
+     ```
 
 5. Install or upgrade [`ultralytics`](https://github.com/ultralytics/ultralytics) package
  
- Install:
- ``` shell
- pip install ultralytics
- ```
- Upgrade:
- ``` shell
- pip install -U ultralytics
- ```
+     ``` shell
+     # Install
+     pip install ultralytics
+
+     # Upgrade
+     pip install -U ultralytics
+     ```
 
 6. Prepare your own PyTorch weight such as `yolov8n.pt`
+
+7. Enable MAX Power Mode and Jetson Clocks (optional)
+
+     ``` shell
+     # MAX Power Mode
+     sudo nvpmodel -m 0
+
+     # Enable Clocks
+     sudo jetson_clocks
+     ```
 
 
 ***NOTICE:***
@@ -39,6 +48,8 @@
 Install compatible `PyTorch` in the `CUDA` version follow [`PyTorch Version Check`](https://pytorch.org/get-started/previous-versions/)
 
 Tested on Nvidia Jetson Orin Nano
+
+In the case of the yolov8n model, 35 frames were shown, but when TensorRT is applied, it rises to 60 frames.
 
 
 # Usage
