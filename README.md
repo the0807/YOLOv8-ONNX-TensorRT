@@ -1,6 +1,13 @@
 # YOLOv8-TensorRT
 👀 YOLOv8 using TensorRT in real-time camera
 
+# FPS
+#### Tested on `Nvidia Jetson Orin Nano`
+|Model|Quantization method|FPS|
+|:---|:---:|:---:|
+|yolov8n.pt||35
+|yolov8n.engine|FP12|60
+|yolov8n.engine|Int8|80
 
 # Prepare
 1. Install `CUDA`
@@ -38,30 +45,27 @@ Install compatible `PyTorch` in the `CUDA` version
 
 🚀 [`PyTorch Version Check`](https://pytorch.org/get-started/previous-versions/)
 
-Tested on `Nvidia Jetson Orin Nano`
-
-In the case of the `yolov8n` model, `35 frames` were shown, but when `TensorRT(FP16)` is applied, it rises to `60 frames`.
 
 
-# Jetson (optional)
+# Jetson (optional but recommend for high speed)
 - Enable MAX Power Mode and Jetson Clocks
 
- ``` shell
- # MAX Power Mode
- sudo nvpmodel -m 0
-
- # Enable Clocks
- sudo jetson_clocks
- ```
+     ``` shell
+     # MAX Power Mode
+     sudo nvpmodel -m 0
+    
+     # Enable Clocks
+     sudo jetson_clocks
+     ```
 
 - Install Jetson Stats Application
 
- ``` shell
- sudo apt update
- sudo pip install jetson-stats
- sudo reboot
- jtop
- ```
+     ``` shell
+     sudo apt update
+     sudo pip install jetson-stats
+     sudo reboot
+     jtop
+     ```
 
 
 # Usage
@@ -74,9 +78,8 @@ In the case of the `yolov8n` model, `35 frames` were shown, but when `TensorRT(F
  ```
 Please see more information in [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
 
-#### Description of all arguments
-
-- `--model` : The PyTorch model you trained such as `yolov8n.pt`
+#### Description of all arguments:
+- `--model` : required The PyTorch model you trained such as `yolov8n.pt`
 - `--q` : Quantization method `[fp16, int8]`
 - `--batch` : Specifies export model batch inference size or the max number of images the exported model will process concurrently in predict mode.
 - `--workspace` : Sets the maximum workspace size in GiB for TensorRT optimizations, balancing memory usage and performance.
@@ -85,10 +88,10 @@ Please see more information in [`ultralytics_export`](https://docs.ultralytics.c
 ### 2. Real-time camera inference
 
 ``` shell
-python3 run_camera.py --model 'model/yolov8n.engine'
+python3 run_camera.py --model 'model/yolov8n.engine' --q int8
 ```
 Please see more information in [`ultralytics_predict`](https://docs.ultralytics.com/modes/predict/)
 
-#### Description of all arguments
-
+#### Description of all arguments:
 - `--model` : The PyTorch model you trained such as `yolov8n.pt` or `yolov8n.engine`
+- `--q` : Quantization method `[fp16, int8]`
