@@ -67,12 +67,20 @@ In the case of the `yolov8n` model, `35 frames` were shown, but when `TensorRT(F
 # Usage
 ### 1. Turn the PyTorch model into TensorRT engine
 
-Make sure the model path is correct before running
+#### Make sure the model path is correct before running
 
  ``` shell
- python3 export_tensorrt.py
+ python3 export_tensorrt.py —model 'model/yolov8n.pt' —q int8
  ```
 Please see more information in [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
+
+#### Description of all arguments
+
+- `--model` : The PyTorch model you trained such as `yolov8n.pt`
+- `--q` : Quantization method `[fp16, int8]`
+- `--batch` : Specifies export model batch inference size or the max number of images the exported model will process concurrently in predict mode.
+- `--workspace` : Sets the maximum workspace size in GiB for TensorRT optimizations, balancing memory usage and performance.
+
 
 ### 2. Real-time camera inference
 
