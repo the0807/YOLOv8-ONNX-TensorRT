@@ -32,24 +32,36 @@
 
 6. Prepare your own PyTorch weight such as `yolov8n.pt`
 
-7. Enable MAX Power Mode and Jetson Clocks (optional)
-
-     ``` shell
-     # MAX Power Mode
-     sudo nvpmodel -m 0
-
-     # Enable Clocks
-     sudo jetson_clocks
-     ```
-
-
 ***NOTICE:***
 
-Install compatible `PyTorch` in the `CUDA` version follow [`PyTorch Version Check`](https://pytorch.org/get-started/previous-versions/)
+Install compatible `PyTorch` in the `CUDA` version
 
-Tested on Nvidia Jetson Orin Nano
+🚀 [`PyTorch Version Check`](https://pytorch.org/get-started/previous-versions/)
 
-In the case of the yolov8n model, 35 frames were shown, but when TensorRT is applied, it rises to 60 frames.
+Tested on `Nvidia Jetson Orin Nano`
+
+In the case of the `yolov8n` model, `35 frames` were shown, but when `TensorRT(FP16)` is applied, it rises to `60 frames`.
+
+
+# Jetson (optional)
+- Enable MAX Power Mode and Jetson Clocks
+
+ ``` shell
+ # MAX Power Mode
+ sudo nvpmodel -m 0
+
+ # Enable Clocks
+ sudo jetson_clocks
+ ```
+
+- Install Jetson Stats Application
+
+ ``` shell
+ sudo apt update
+ sudo pip install jetson-stats
+ sudo reboot
+ jtop
+ ```
 
 
 # Usage
