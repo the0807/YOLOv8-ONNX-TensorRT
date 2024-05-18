@@ -6,7 +6,7 @@
 |Model|Quantization method|FPS|
 |:---|:---:|:---:|
 |yolov8n.pt||35
-|yolov8n.engine|FP12|60
+|yolov8n.engine|FP16|60
 |yolov8n.engine|Int8|80
 
 # Prepare
