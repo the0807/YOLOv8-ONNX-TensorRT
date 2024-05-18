@@ -2,18 +2,20 @@ import sys
 import torch
 import cv2
 import random
-import pathlib
 import time
 from ultralytics import YOLO
 import utils.draw as draw
 
-def yolov8_detection(model, image, file_extension):
+def yolov8_detection(model, image, q):
     img_size = 640
     confidence = 0.7
+    stream_buffer = True
     verb = False
     
-    if file_extension == '.engine':
+    if q == 'fp16':
         results = model.predict(image, imgsz=img_size, conf=confidence, verbose=verb, half=True)
+    elif q == 'int8':
+        results = model.predict(image, imgsz=img_size, conf=confidence, verbose=verb, int8=True)
     else:
         results = model.predict(image, imgsz=img_size, conf=confidence, verbose=verb)
     
@@ -27,10 +29,7 @@ def yolov8_detection(model, image, file_extension):
     return cls, conf, box
 
 
-def detect_camera(model_path):
-    # Check File Extension
-    file_extension = pathlib.Path(model_path).suffix
-
+def detect_camera(model_path, q):
     model = YOLO(model_path, task='detect')
 
     # Class Name and Colors
@@ -56,7 +55,7 @@ def detect_camera(model_path):
         start = time.time()
 
         # Detection
-        cls, conf, box = yolov8_detection(model, frame, file_extension)
+        cls, conf, box = yolov8_detection(model, frame, q)
 
         # Pack together for easy use
         detection_output = list(zip(cls, conf, box))
