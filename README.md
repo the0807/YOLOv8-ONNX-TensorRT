@@ -20,9 +20,15 @@
  pip install -r requirements.txt
  ```
 
-5. Install [`ultralytics`](https://github.com/ultralytics/ultralytics) package
+5. Install or upgrade [`ultralytics`](https://github.com/ultralytics/ultralytics) package
+ 
+ Install:
  ``` shell
  pip install ultralytics
+ ```
+ Upgrade:
+ ``` shell
+ pip install -U ultralytics
  ```
 
 6. Prepare your own PyTorch weight such as `yolov8n.pt`
