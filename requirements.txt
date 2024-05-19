@@ -1,2 +1,3 @@
+ultralytics
 numpy<=1.23.5
 opencv-python
