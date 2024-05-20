@@ -120,7 +120,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||10|90|52.7
 |yolov8l.engine|FP16|25|35|52.7
-|yolov8l.engine|INT8|35|22|
+|yolov8l.engine|INT8|35|18.3|46
 
 </details>
 
@@ -243,7 +243,7 @@ python3 run_camera.py --model 'model/yolov8n.onnx' --q fp16
 Please see more information in [`ultralytics_predict`](https://docs.ultralytics.com/modes/predict/)
 
 #### Description of all arguments:
-- `--model` : The PyTorch model you trained such as `yolov8n.pt` or `yolov8n.engine`
+- `--model` : The PyTorch model you trained such as `yolov8n.onnx`
 - `--q` : Quantization method `[fp16]`
 
 </details>
