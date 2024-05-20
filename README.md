@@ -1,7 +1,7 @@
 <div align="center">
 
 # YOLOv8-ONNX-TensorRT
-[![GitHub all releases](https://img.shields.io/github/downloads/the0807/YOLOv8-ONNX-TensorRT/total)](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases)
+<!-- [![GitHub all releases](https://img.shields.io/github/downloads/the0807/YOLOv8-ONNX-TensorRT/total)](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases) -->
 ### 👀 YOLOv8 optimized with ONNX or TensorRT and applied to Real-time camera
 
 </div>
