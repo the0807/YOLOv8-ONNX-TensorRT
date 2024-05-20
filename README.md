@@ -5,7 +5,7 @@
 
 #### Tested on `Nvidia Jetson Orin Nano`
 
-<details>
+<details open>
 <summary>yolov8n</summary>
 <!-- - #### yolov8n -->
 
@@ -13,7 +13,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||40|20|37.1
 |yolov8n.engine|FP16|70|7|37.1
-|yolov8n.engine|INT8|80|5|19.8
+|yolov8n.engine|INT8|80|5|26.2
 
 </details>
 
@@ -25,11 +25,11 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8s.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt)||30|30|44.7
 |yolov8s.engine|FP16|55|11|44.7
-|yolov8s.engine|INT8|70|8|28.3
+|yolov8s.engine|INT8|70|8|
 
 </details>
 
-<details open>
+<details>
 <summary>yolov8m</summary>
 <!-- - #### yolov8m -->
 
@@ -37,11 +37,11 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||15|53|50
 |yolov8m.engine|FP16|30|23|50
-|yolov8m.engine|INT8|45|16|31.7
+|yolov8m.engine|INT8|45|16|
 
 </details>
 
-<details open>
+<details>
 <summary>yolov8l</summary>
 <!-- - #### yolov8l -->
 
@@ -49,11 +49,11 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||10|90|52.7
 |yolov8l.engine|FP16|25|35|52.7
-|yolov8l.engine|INT8|35|22|35.4
+|yolov8l.engine|INT8|35|22|
 
 </details>
 
-<details open>
+<details>
 <summary>yolov8x</summary>
 <!-- - #### yolov8x -->
 
@@ -61,7 +61,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8x.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt)||6|131|53.7
 |yolov8x.engine|FP16|16|56|53.7
-|yolov8x.engine|INT8|25|33|38.4
+|yolov8x.engine|INT8|25|33|
 
 </details>
 
