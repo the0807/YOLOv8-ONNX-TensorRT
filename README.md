@@ -17,9 +17,9 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||40|20|37.1
-|yolov8n.engine|FP16|70|7|37.1
-|yolov8n.engine|INT8|80|4.3|26.2
+|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||32|21.9|37.1
+|yolov8n.engine|FP16|65|7.3|37
+|yolov8n.engine|INT8|70|4.3|26.2
 
 </details>
 
@@ -29,9 +29,9 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8s.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt)||30|30|44.7
-|yolov8s.engine|FP16|55|11|44.7
-|yolov8s.engine|INT8|70|5.6|37.8
+|[yolov8s.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt)||27|33.1|44.7
+|yolov8s.engine|FP16|50|11.4|44.7
+|yolov8s.engine|INT8|60|5.6|37.8
 
 </details>
 
@@ -41,9 +41,9 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||15|53|50
-|yolov8m.engine|FP16|30|23|50
-|yolov8m.engine|INT8|45|13.9|44.1
+|[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||15|66.5|50.1
+|yolov8m.engine|FP16|30|23.6|50
+|yolov8m.engine|INT8|40|13.9|44.1
 
 </details>
 
@@ -53,9 +53,9 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||10|90|52.7
-|yolov8l.engine|FP16|25|35|52.7
-|yolov8l.engine|INT8|35|18.3|46
+|[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||10||
+|yolov8l.engine|FP16|25||
+|yolov8l.engine|INT8|32|18.3|46
 
 </details>
 
@@ -65,9 +65,11 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8x.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt)||6|131|53.7
-|yolov8x.engine|FP16|16|56|53.7
-|yolov8x.engine|INT8|25|33.4|38.4
+|[yolov8x.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt)||||
+|yolov8x.engine|FP16|||
+|yolov8x.engine|INT8||33.4|38.4
+
+- YOLOv8x has limitations in optimizing
 
 </details>
 
@@ -75,8 +77,8 @@
 ***NOTICE:***
 
 - Use optimal parameters for each model
+- **FPS** is based on when an object is detected. It increases by about 5 frames when an object is not detected.
 - **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset.
-- YOLOv8x has limitations in optimizing
 
 
 # ✏️ Prepare
