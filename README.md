@@ -7,72 +7,7 @@
 
 # 🏆 Performance
 
-### ⭐ ONNX 
-<details>
-<summary>details</summary>
-
-#### Tested on `Raspberry Pi 4B`
-
-<details>
-<summary>yolov8n</summary>
-<!-- - #### yolov8n -->
-
-|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
-|:---:|:---:|:---:|:---:|:---:|
-|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||||
-|yolov8n.onnx|FP16|||
-
-</details>
-
-<details>
-<summary>yolov8s</summary>
-<!-- - #### yolov8s -->
-
-|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
-|:---:|:---:|:---:|:---:|:---:|
-|[yolov8s.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt)||||
-|yolov8s.onnx|FP16|||
-
-</details>
-
-<details>
-<summary>yolov8m</summary>
-<!-- - #### yolov8m -->
-
-|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
-|:---:|:---:|:---:|:---:|:---:|
-|[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||||
-|yolov8m.onnx|FP16|||
-
-</details>
-
-<details>
-<summary>yolov8l</summary>
-<!-- - #### yolov8l -->
-
-|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
-|:---:|:---:|:---:|:---:|:---:|
-|[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||||
-|yolov8l.onnx|FP16|||
-
-</details>
-
-<details>
-<summary>yolov8x</summary>
-<!-- - #### yolov8x -->
-
-|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
-|:---:|:---:|:---:|:---:|:---:|
-|[yolov8x.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt)||||
-|yolov8x.onnx|FP16|||
-
-</details>
-
-</details>
-
 ### ⭐ TensorRT
-<details open>
-<summary>details</summary>
 
 #### Tested on `Nvidia Jetson Orin Nano`
 
@@ -132,9 +67,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8x.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt)||6|131|53.7
 |yolov8x.engine|FP16|16|56|53.7
-|yolov8x.engine|INT8|25|33|
-
-</details>
+|yolov8x.engine|INT8|25|33.4|38.4
 
 </details>
 
@@ -143,7 +76,7 @@
 
 - Use optimal parameters for each model
 - **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset.
-
+- YOLOv8x has limitations in optimizing
 
 
 # ✏️ Prepare
