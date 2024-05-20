@@ -139,6 +139,8 @@
  ``` shell
  python3 export_tensorrt.py --model 'model/yolov8n.pt' --q int8 --data='coco8.yaml' --workspace 2 --batch 3
  ```
+If aborted or killed appears, reduce the batch or workspace
+
 Please see more information in [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
 
 #### Description of all arguments:
