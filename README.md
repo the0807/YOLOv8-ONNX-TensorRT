@@ -155,13 +155,13 @@
 
     🚀 [`PyTorch official website`](https://pytorch.org/get-started/locally/)
 
-3. Install `TensorRT`
+3. Install if using `TensorRT`
 
     🚀 [`TensorRT official website`](https://developer.nvidia.com/nvidia-tensorrt-8x-download)
 
 4. Git clone and Install python requirements
      ``` shell
-     git clone https://github.com/the0807/YOLOv8-TensorRT
+     git clone https://github.com/the0807/YOLOv8-ONNX-TensorRT
      pip install -r requirements.txt
      ```
 
