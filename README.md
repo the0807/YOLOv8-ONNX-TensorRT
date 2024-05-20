@@ -68,6 +68,7 @@
 
 ***NOTICE:***
 
+- Use optimal parameters for each model
 - **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset.
 
 
