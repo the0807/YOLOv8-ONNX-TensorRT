@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 import argparse
+import pathlib
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='validation model')
@@ -9,19 +10,36 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     model = YOLO(args.model, task='detect')
-    if args.q == 'fp16':
-        results = model.val(
-            data=args.data,
-            batch=1,
-            imgsz=640,
-            verbose=False,
-            half = True
-        )
-    if args.q == 'int8':
-        results = model.val(
-            data=args.data,
-            batch=1,
-            imgsz=640,
-            verbose=False,
-            int8 = True
-        )
+    
+    file_extension = pathlib.Path(args.model).suffix
+    if file_extension == '.engine':
+        if args.q == 'fp16':
+            results = model.val(
+                data=args.data,
+                batch=1,
+                imgsz=640,
+                verbose=False,
+                half = True
+            )
+        elif args.q == 'int8':
+            results = model.val(
+                data=args.data,
+                batch=1,
+                imgsz=640,
+                verbose=False,
+                int8 = True
+            )
+        else:
+            print('\n[ERROR] Make sure "--q" parameter is entered correctly!')
+    elif file_extension == '.onnx':
+        if args.q == 'fp16':
+            results = model.val(
+                data=args.data,
+                batch=1,
+                imgsz=640,
+                verbose=False,
+            )
+        else:
+            print('\n[ERROR] ONNX supports only FP16 quantization!')
+    else:
+        print('\n[ERROR] File extensions only support [.engine], [.onnx]')
