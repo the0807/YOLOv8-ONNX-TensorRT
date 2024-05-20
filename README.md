@@ -136,13 +136,14 @@
 #### Make sure the model path is correct before running
 
  ``` shell
- python3 export_tensorrt.py —model 'model/yolov8n.pt' —q int8
+ python3 export_tensorrt.py --model 'model/yolov8n.pt' --q fp18 --data='coco8.yaml' --workspace 2 --batch 3
  ```
 Please see more information in [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
 
 #### Description of all arguments:
 - `--model` : required The PyTorch model you trained such as `yolov8n.pt`
 - `--q` : Quantization method `[fp16, int8]`
+- `--data` : Path to your data.yaml
 - `--batch` : Specifies export model batch inference size or the max number of images the exported model will process concurrently in predict mode.
 - `--workspace` : Sets the maximum workspace size in GiB for TensorRT optimizations, balancing memory usage and performance.
 
@@ -157,3 +158,10 @@ Please see more information in [`ultralytics_predict`](https://docs.ultralytics.
 #### Description of all arguments:
 - `--model` : The PyTorch model you trained such as `yolov8n.pt` or `yolov8n.engine`
 - `--q` : Quantization method `[fp16, int8]`
+
+
+# Validation
+ ``` shell
+
+ ```
+
