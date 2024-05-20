@@ -6,25 +6,68 @@
 </div>
 
 # 🏆 Performance
-
-### ⭐ TensorRT
-
 #### Tested on `Nvidia Jetson Orin Nano`
 
+### ⭐ ONNX (CPU)
 <details>
-<summary>yolov8n</summary>
+<summary>details</summary>
+
+<details open>
+<summary>YOLOv8n</summary>
 <!-- - #### yolov8n -->
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||32|21.9|37.1
+|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||2|535.8|37.1
+|yolov8n.onnx|FP16|7|146|37
+
+</details>
+
+<details>
+<summary>YOLOv8s</summary>
+<!-- - #### yolov8s -->
+
+|Model|Quantization|FPS|
+|:---:|:---:|:---:|
+|[yolov8s.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt)||1
+|yolov8s.engine|FP16|3
+
+</details>
+
+<details>
+<summary>YOLOv8m</summary>
+<!-- - #### yolov8m -->
+
+|Model|Quantization|FPS|
+|:---:|:---:|:---:|
+|[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||0.5||
+|yolov8m.engine|FP16|1.2||
+
+</details>
+
+`YOLOv8l` and `YOLOv8x` were too slow to measure
+
+</details>
+
+
+### ⭐ TensorRT (GPU)
+<details open>
+<summary>details</summary>
+
+<details>
+<summary>YOLOv8n</summary>
+<!-- - #### yolov8n -->
+
+|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
+|:---:|:---:|:---:|:---:|:---:|
+|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||36|21.9|37.1
 |yolov8n.engine|FP16|65|7.3|37
 |yolov8n.engine|INT8|70|4.3|26.2
 
 </details>
 
-<details>
-<summary>yolov8s</summary>
+<details open>
+<summary>YOLOv8s</summary>
 <!-- - #### yolov8s -->
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
@@ -35,41 +78,41 @@
 
 </details>
 
-<details open>
-<summary>yolov8m</summary>
+<details>
+<summary>YOLOv8m</summary>
 <!-- - #### yolov8m -->
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||15|66.5|50.1
-|yolov8m.engine|FP16|30|23.6|50
+|yolov8m.engine|FP16|32|23.6|50
 |yolov8m.engine|INT8|40|13.9|44.1
 
 </details>
 
 <details>
-<summary>yolov8l</summary>
+<summary>YOLOv8l</summary>
 <!-- - #### yolov8l -->
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||10||
-|yolov8l.engine|FP16|25||
-|yolov8l.engine|INT8|32|18.3|46
+|[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||10|103.2|52.9
+|yolov8l.engine|FP16|23|35.5|52.6
+|yolov8l.engine|INT8|38|18.3|46
 
 </details>
 
 <details>
-<summary>yolov8x</summary>
+<summary>YOLOv8x</summary>
 <!-- - #### yolov8x -->
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8x.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt)||||
-|yolov8x.engine|FP16|||
-|yolov8x.engine|INT8||33.4|38.4
+|[yolov8x.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt)||6|160.2|54.0
+|yolov8x.engine|FP16|15|56.6|53.7
+|yolov8x.engine|INT8|24|34.2|38.4
 
-- YOLOv8x has limitations in optimizing
+</details>
 
 </details>
 
@@ -77,7 +120,7 @@
 ***NOTICE:***
 
 - Use optimal parameters for each model
-- **FPS** is based on when an object is detected. It increases by about 5 frames when an object is not detected.
+- **FPS** is based on when an object is detected.
 - **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset.
 
 
@@ -123,8 +166,6 @@
 # ⚡️ Optional (recommend for high speed)
 
 ### ⭐ Jetson
-<details>
-<summary>details</summary>
 
 - Enable MAX Power Mode and Jetson Clocks
 
@@ -144,8 +185,6 @@
      sudo reboot
      jtop
      ```
-
-</details>
 
 
 # 📚 Usage
