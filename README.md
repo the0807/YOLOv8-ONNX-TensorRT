@@ -1,6 +1,7 @@
 <div align="center">
 
 # YOLOv8-ONNX-TensorRT
+[![GitHub all releases](https://img.shields.io/github/downloads/the0807/YOLOv8-ONNX-TensorRT/total)](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases)
 ### 👀 YOLOv8 optimized with ONNX or TensorRT and applied to Real-time camera
 
 </div>
@@ -18,7 +19,7 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||2|535.8|37.1
+|[yolov8n.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8n.zip)||2|535.8|37.1
 |yolov8n.onnx|FP16|7|146|37
 
 </details>
@@ -29,7 +30,7 @@
 
 |Model|Quantization|FPS|
 |:---:|:---:|:---:|
-|[yolov8s.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt)||1
+|[yolov8s.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8s.zip)||1
 |yolov8s.engine|FP16|3
 
 </details>
@@ -40,7 +41,7 @@
 
 |Model|Quantization|FPS|
 |:---:|:---:|:---:|
-|[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||0.5||
+|[yolov8m.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8m.zip)||0.5||
 |yolov8m.engine|FP16|1.2||
 
 </details>
@@ -60,7 +61,7 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt)||36|21.9|37.1
+|[yolov8n.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8n.zip)||36|21.9|37.1
 |yolov8n.engine|FP16|65|7.3|37
 |yolov8n.engine|INT8|70|4.3|26.2
 
@@ -72,7 +73,7 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8s.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt)||27|33.1|44.7
+|[yolov8s.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8s.zip)||27|33.1|44.7
 |yolov8s.engine|FP16|50|11.4|44.7
 |yolov8s.engine|INT8|60|5.6|37.8
 
@@ -84,7 +85,7 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt)||15|66.5|50.1
+|[yolov8m.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8m.zip)||15|66.5|50.1
 |yolov8m.engine|FP16|32|23.6|50
 |yolov8m.engine|INT8|40|13.9|44.1
 
@@ -96,7 +97,7 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8l.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt)||10|103.2|52.9
+|[yolov8l.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8l.zip)||10|103.2|52.9
 |yolov8l.engine|FP16|23|35.5|52.6
 |yolov8l.engine|INT8|38|18.3|46
 
@@ -108,7 +109,7 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8x.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt)||6|160.2|54.0
+|[yolov8x.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8x.zip)||6|160.2|54.0
 |yolov8x.engine|FP16|15|56.6|53.7
 |yolov8x.engine|INT8|24|34.2|38.4
 
@@ -122,7 +123,7 @@
 - Use optimal parameters for each model
 - **FPS** is based on when an object is detected.
 - **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset.
-
+- You can download the ONNX and TensorRT files from the [release](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases), but optimizing them on your own devices will provide the best results
 
 # ✏️ Prepare
 1. Install `CUDA`
@@ -292,3 +293,5 @@ Please see more information in [`ultralytics_predict`](https://docs.ultralytics.
 - `--data` : Path to your validata.yaml
 
 </details>
+
+
