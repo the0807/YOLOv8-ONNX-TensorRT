@@ -136,7 +136,7 @@
 #### Make sure the model path is correct before running
 
  ``` shell
- python3 export_tensorrt.py --model 'model/yolov8n.pt' --q fp18 --data='coco8.yaml' --workspace 2 --batch 3
+ python3 export_tensorrt.py --model 'model/yolov8n.pt' --q int8 --data='coco8.yaml' --workspace 2 --batch 3
  ```
 Please see more information in [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
 
@@ -162,6 +162,10 @@ Please see more information in [`ultralytics_predict`](https://docs.ultralytics.
 
 # Validation
  ``` shell
-
+ python3 validation.py --model 'model/yolov8n.engine' --q int8 --data 'coco.yaml'
  ```
 
+#### Description of all arguments:
+- `--model` : required The PyTorch model you trained such as `yolov8n.pt`
+- `--q` : Quantization method `[fp16, int8]`
+- `--data` : Path to your validata.yaml
