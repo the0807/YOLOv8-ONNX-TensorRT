@@ -117,7 +117,7 @@
      # MAX Power Mode
      sudo nvpmodel -m 0
     
-     # Enable Clocks
+     # Enable Clocks (Do it again when you reboot)
      sudo jetson_clocks
      ```
 
