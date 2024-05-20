@@ -162,6 +162,7 @@
 4. Git clone and Install python requirements
      ``` shell
      git clone https://github.com/the0807/YOLOv8-ONNX-TensorRT
+     cd YOLOv8-ONNX-TensorRT
      pip install -r requirements.txt
      ```
 
