@@ -7,7 +7,9 @@
 </div>
 
 # 🏆 Performance
-#### Tested on `Nvidia Jetson Orin Nano`
+
+> [!Note]
+> -  Tested on `Nvidia Jetson Orin Nano`
 
 ### ⭐ ONNX (CPU)
 <details>
@@ -47,6 +49,7 @@
 </details>
 
 `YOLOv8l` and `YOLOv8x` were too slow to measure
+
 
 </details>
 
@@ -117,13 +120,16 @@
 
 </details>
 
+> [!Note]
+> - Use optimal parameters for each model
+> - **FPS** is based on when an object is detected
+> - **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset
 
-***NOTICE:***
+> [!Tip]
+> - You can download the ONNX and TensorRT files from the [release](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases)
 
-- Use optimal parameters for each model
-- **FPS** is based on when an object is detected.
-- **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset.
-- You can download the ONNX and TensorRT files from the [release](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases), but optimizing them on your own devices will provide the best results
+> [!Caution]
+> - optimizing Model on your own devices will provide the best results
 
 # ✏️ Prepare
 1. Install `CUDA`
@@ -157,11 +163,10 @@
 
 6. Prepare your own PyTorch weight such as `yolov8n.pt`
 
-***NOTICE:***
-
-- Install compatible `PyTorch` in the `CUDA` version
-
-    🚀 [`PyTorch Version Check`](https://pytorch.org/get-started/previous-versions/)
+> [!Important]
+> - Install compatible `PyTorch` in the `CUDA` version
+> 
+>     🚀 [`PyTorch Version Check`](https://pytorch.org/get-started/previous-versions/)
 
 
 # ⚡️ Optional (recommend for high speed)
@@ -196,13 +201,9 @@
 
 ### 1. Turn the PyTorch model into ONNX
 
-#### Make sure the model path is correct before running
-
  ``` shell
  python3 export_onnx.py --model 'model/yolov8n.pt' --q fp16 --data='coco8.yaml'
  ```
-
-Please see more information in [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
 
 #### Description of all arguments:
 - `--model` : required The PyTorch model you trained such as `yolov8n.pt`
@@ -216,7 +217,6 @@ Please see more information in [`ultralytics_export`](https://docs.ultralytics.c
 ``` shell
 python3 run_camera.py --model 'model/yolov8n.onnx' --q fp16
 ```
-Please see more information in [`ultralytics_predict`](https://docs.ultralytics.com/modes/predict/)
 
 #### Description of all arguments:
 - `--model` : The PyTorch model you trained such as `yolov8n.onnx`
@@ -231,14 +231,9 @@ Please see more information in [`ultralytics_predict`](https://docs.ultralytics.
 
 ### 1. Turn the PyTorch model into TensorRT engine
 
-#### Make sure the model path is correct before running
-
  ``` shell
  python3 export_tensorrt.py --model 'model/yolov8n.pt' --q int8 --data='coco8.yaml' --workspace 2 --batch 3
  ```
-If aborted or killed appears, reduce the `--batch` and `--workspace`
-
-Please see more information in [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
 
 #### Description of all arguments:
 - `--model` : required The PyTorch model you trained such as `yolov8n.pt`
@@ -253,7 +248,6 @@ Please see more information in [`ultralytics_export`](https://docs.ultralytics.c
 ``` shell
 python3 run_camera.py --model 'model/yolov8n.engine' --q int8
 ```
-Please see more information in [`ultralytics_predict`](https://docs.ultralytics.com/modes/predict/)
 
 #### Description of all arguments:
 - `--model` : The PyTorch model you trained such as `yolov8n.pt` or `yolov8n.engine`
@@ -261,6 +255,15 @@ Please see more information in [`ultralytics_predict`](https://docs.ultralytics.
 
 </details>
 
+> [!Tip]
+> - You can get more information
+> 
+>     🚀 [`ultralytics_export`](https://docs.ultralytics.com/modes/export/)
+> 
+>     🚀 [`ultralytics_predict`](https://docs.ultralytics.com/modes/predict/)
+
+> [!Warning]
+> - If aborted or killed appears, reduce the `--batch` and `--workspace`
 
 # 🧐 Validation
 
