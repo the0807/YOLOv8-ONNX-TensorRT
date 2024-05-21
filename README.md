@@ -2,11 +2,13 @@
 
 # YOLOv8-ONNX-TensorRT
 
+<!-- 
 [![Python](https://img.shields.io/badge/Python-3.8.10-yellow)](https://www.python.org/downloads/release/python-3810/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0.0-orange)](https://pytorch.org/)
 [![JetPack](https://img.shields.io/badge/JetPack-5.1.2-green)](https://developer.nvidia.com/embedded/jetpack-sdk-512)
 [![CUDA](https://img.shields.io/badge/CUDA-11.4-green)](https://developer.nvidia.com/cuda-downloads)
 [![TensorRT](https://img.shields.io/badge/TensorRT-8.5.2-green)](https://developer.nvidia.com/tensorrt)
+-->
 <!-- [![GitHub all releases](https://img.shields.io/github/downloads/the0807/YOLOv8-ONNX-TensorRT/total)](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases) -->
 ### 👀 Apply YOLOv8 exported with ONNX or TensorRT(FP16, INT8) to the Real-time camera
 
