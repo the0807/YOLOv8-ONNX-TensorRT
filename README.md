@@ -8,6 +8,8 @@
 [![CUDA](https://img.shields.io/badge/CUDA-11.4-green)](https://developer.nvidia.com/cuda-downloads)
 [![TensorRT](https://img.shields.io/badge/TensorRT-8.5.2-green)](https://developer.nvidia.com/tensorrt)
 [![GitHub all releases](https://img.shields.io/github/downloads/the0807/YOLOv8-ONNX-TensorRT/total)](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases)
+<!-- [![GitHub Repo stars](https://img.shields.io/github/stars/the0807/YOLOv8-ONNX-TensorRT)](https://github.com/the0807/YOLOv8-ONNX-TensorRT/stargazers) -->
+
 ### 👀 Apply YOLOv8 exported with ONNX or TensorRT(FP16, INT8) to the Real-time camera
 
 </div>
