@@ -2,7 +2,7 @@
 
 # YOLOv8-ONNX-TensorRT
 <!-- [![GitHub all releases](https://img.shields.io/github/downloads/the0807/YOLOv8-ONNX-TensorRT/total)](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases) -->
-### 👀 YOLOv8 applied to Real-time camera with ONNX or TensorRT optimized by FP16 and INT8
+### 👀 Apply YOLOv8 exported to ONNX or TensorRT(FP16, INT8) to the Real-time camera
 
 </div>
 
