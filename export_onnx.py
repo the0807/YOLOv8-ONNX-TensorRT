@@ -15,7 +15,5 @@ if __name__ == '__main__':
     # Export the model
     if args.q == 'fp16':
         model.export(format = 'onnx', data = args.data, batch = args.batch, half = True)
-    elif args.q == 'fp16':
-        model.export(format = 'onnx', data = args.data, batch = args.batch)
     else:
         print('\n[ERROR] Make sure "--q" parameter is entered correctly!')
