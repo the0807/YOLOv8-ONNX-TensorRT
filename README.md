@@ -30,7 +30,7 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8s.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8s.zip)||1||
+|[yolov8s.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8s.zip)||1|943.9|44.7
 |yolov8s.onnx|FP16|3|347.6|44.7
 
 </details>
