@@ -28,10 +28,10 @@
 <summary>YOLOv8s</summary>
 <!-- - #### yolov8s -->
 
-|Model|Quantization|FPS|
-|:---:|:---:|:---:|
-|[yolov8s.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8s.zip)||1
-|yolov8s.engine|FP16|3
+|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
+|:---:|:---:|:---:|:---:|:---:|
+|[yolov8s.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8s.zip)||1||
+|yolov8s.onnx|FP16|3|347.6|44.7
 
 </details>
 
@@ -39,10 +39,10 @@
 <summary>YOLOv8m</summary>
 <!-- - #### yolov8m -->
 
-|Model|Quantization|FPS|
-|:---:|:---:|:---:|
-|[yolov8m.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8m.zip)||0.5||
-|yolov8m.engine|FP16|1.2||
+|Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
+|:---:|:---:|:---:|:---:|:---:|
+|[yolov8m.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8m.zip)||0.5||||
+|yolov8m.onnx|FP16|1.2||||
 
 </details>
 
