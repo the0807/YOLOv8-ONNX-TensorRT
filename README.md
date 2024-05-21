@@ -129,7 +129,7 @@
 > - You can download the ONNX and TensorRT files from the [release](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases)
 
 > [!Caution]
-> - optimizing Model on your own devices will provide the best results
+> - Optimizing and exporting models on your own devices will give you the best results
 
 # ✏️ Prepare
 1. Install `CUDA`
