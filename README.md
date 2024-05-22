@@ -98,7 +98,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8m.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8m.zip)||14|66.5|50.1
 |yolov8m.engine|FP16|30|23.6|50
-|yolov8m.engine|INT8|37||
+|yolov8m.engine|INT8|38|17.1|46.2
 
 </details>
 
