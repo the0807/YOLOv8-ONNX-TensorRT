@@ -210,7 +210,7 @@
 ### 1. Turn the PyTorch model into ONNX
 
  ``` shell
- python3 export_onnx.py --model 'model/yolov8n.pt' --q fp16 --data='coco8.yaml'
+ python3 export_onnx.py --model 'model/yolov8n.pt' --q fp16 --data='coco.yaml'
  ```
 
 #### Description of all arguments:
@@ -240,7 +240,7 @@ python3 run_camera.py --model 'model/yolov8n.onnx' --q fp16
 ### 1. Turn the PyTorch model into TensorRT engine
 
  ``` shell
- python3 export_tensorrt.py --model 'model/yolov8n.pt' --q int8 --data='coco8.yaml' --workspace 2 --batch 3
+ python3 export_tensorrt.py --model 'model/yolov8n.pt' --q int8 --data='coco.yaml' --workspace 2 --batch 3
  ```
 
 #### Description of all arguments:
