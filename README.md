@@ -74,7 +74,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8n.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8n.zip)||36|21.9|37.1
 |yolov8n.engine|FP16|60|7.3|37
-|yolov8n.engine|INT8|63|5.3|33
+|yolov8n.engine|INT8|63|5.8|33
 
 </details>
 
@@ -86,7 +86,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8s.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8s.zip)||27|33.1|44.7
 |yolov8s.engine|FP16|48|11.4|44.7
-|yolov8s.engine|INT8|57||
+|yolov8s.engine|INT8|57|8.2|41.2
 
 </details>
 
@@ -171,7 +171,7 @@
 
 6. Prepare your own datasets with PyTorch weights such as 'yolov8n.pt '
 
-7. (Optional) If you want to test with YOLOv8 base model rather than custom model, please run the code and prepare the 'coco' dataset
+7. (Optional) If you want to test with YOLOv8 base model rather than custom model, please run the code and prepare the `COCO` dataset
 
      ``` shell
      cd datasets
