@@ -153,6 +153,7 @@
     🚀 [`TensorRT official website`](https://developer.nvidia.com/nvidia-tensorrt-8x-download)
 
 4. Git clone and Install python requirements
+
      ``` shell
      git clone https://github.com/the0807/YOLOv8-ONNX-TensorRT
      cd YOLOv8-ONNX-TensorRT
@@ -169,7 +170,16 @@
      pip install -U ultralytics
      ```
 
-6. Prepare your own PyTorch weight such as `yolov8n.pt`
+6. Prepare your own datasets with PyTorch weights such as 'yolov8n.pt '
+
+7. (Optional) If you want to test with YOLOv8 base model rather than custom model, please run the code and prepare the 'coco' dataset
+
+     ``` shell
+     cd datasets
+
+     # It will take time to download
+     python3 coco_download.py
+     ```
 
 > [!Important]
 > - Install compatible `PyTorch` in the `CUDA` version
