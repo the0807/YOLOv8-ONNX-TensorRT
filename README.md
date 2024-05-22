@@ -74,7 +74,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8n.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8n.zip)||36|21.9|37.1
 |yolov8n.engine|FP16|60|7.3|37
-|yolov8n.engine|INT8|68|4.3|26.2
+|yolov8n.engine|INT8|63|5.3|33
 
 </details>
 
@@ -86,7 +86,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8s.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8s.zip)||27|33.1|44.7
 |yolov8s.engine|FP16|48|11.4|44.7
-|yolov8s.engine|INT8|57|5.6|37.8
+|yolov8s.engine|INT8|57||
 
 </details>
 
@@ -98,7 +98,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8m.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8m.zip)||14|66.5|50.1
 |yolov8m.engine|FP16|30|23.6|50
-|yolov8m.engine|INT8|37|13.9|44.1
+|yolov8m.engine|INT8|37||
 
 </details>
 
@@ -110,7 +110,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8l.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8l.zip)||9|103.2|52.9
 |yolov8l.engine|FP16|22|35.5|52.6
-|yolov8l.engine|INT8|31|18.3|46
+|yolov8l.engine|INT8|31||
 
 </details>
 
@@ -122,14 +122,13 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8x.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8x.zip)||6|160.2|54.0
 |yolov8x.engine|FP16|15|56.6|53.7
-|yolov8x.engine|INT8|24|34.2|38.4
+|yolov8x.engine|INT8|24||
 
 </details>
 
 </details>
 
 > [!Note]
-> - Use optimal parameters for each model
 > - **FPS** is based on when an object is detected
 > - **Speed** average and **mAP<sup>val</sup>** values are for single-model single-scale on [COCO val2017](https://cocodataset.org) dataset
 
@@ -250,7 +249,7 @@ python3 run_camera.py --model 'model/yolov8n.onnx' --q fp16
 ### 1. Turn the PyTorch model into TensorRT engine
 
  ``` shell
- python3 export_tensorrt.py --model 'model/yolov8n.pt' --q int8 --data='datasets/coco.yaml' --workspace 2 --batch 3
+ python3 export_tensorrt.py --model 'model/yolov8n.pt' --q int8 --data='datasets/coco.yaml' --workspace 4 --batch 1
  ```
 
 #### Description of all arguments:
