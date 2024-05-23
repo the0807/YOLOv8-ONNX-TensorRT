@@ -272,6 +272,9 @@ python3 run_camera.py --model 'model/yolov8n.engine' --q int8
 
 </details>
 
+> [!Important]
+> - When exporting to `TensorRT(INT8)`, calibration process is performed using validation data of database. To minimize the loss of mAP, more than 1,000 validation data are recommended if there are at least 300.
+
 > [!Tip]
 > - You can get more information
 > 
