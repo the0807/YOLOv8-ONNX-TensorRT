@@ -120,7 +120,7 @@
 
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
-|[yolov8x.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8x.zip)||6|160.2|54.0
+|[yolov8x.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8x.zip)||6|160.2|54
 |yolov8x.engine|FP16|15|56.6|53.9
 |yolov8x.engine|INT8|24|33.9|51.1
 
