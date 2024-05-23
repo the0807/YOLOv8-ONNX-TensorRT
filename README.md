@@ -122,7 +122,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8x.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8x.zip)||6|160.2|54.0
 |yolov8x.engine|FP16|15|56.6|53.7
-|yolov8x.engine|INT8|24||
+|yolov8x.engine|INT8|24|33.9|51.1
 
 </details>
 
