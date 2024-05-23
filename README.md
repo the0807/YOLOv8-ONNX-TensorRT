@@ -73,7 +73,7 @@
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8n.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8n.zip)||36|21.9|37.1
-|yolov8n.engine|FP16|60|7.3|37
+|yolov8n.engine|FP16|60|7.3|37.1
 |yolov8n.engine|INT8|63|5.8|33
 
 </details>
@@ -109,7 +109,7 @@
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8l.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8l.zip)||9|103.2|52.9
-|yolov8l.engine|FP16|22|35.5|52.6
+|yolov8l.engine|FP16|22|35.5|52.8
 |yolov8l.engine|INT8|31|22.4|50.1
 
 </details>
@@ -121,7 +121,7 @@
 |Model|Quantization|FPS|Speed<sup><br>(ms)|mAP<sup>val<br>50-95|
 |:---:|:---:|:---:|:---:|:---:|
 |[yolov8x.pt](https://github.com/the0807/YOLOv8-ONNX-TensorRT/releases/download/v1.0/YOLOv8x.zip)||6|160.2|54.0
-|yolov8x.engine|FP16|15|56.6|53.7
+|yolov8x.engine|FP16|15|56.6|53.9
 |yolov8x.engine|INT8|24|33.9|51.1
 
 </details>
